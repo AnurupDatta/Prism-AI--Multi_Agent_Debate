@@ -24,11 +24,11 @@ The system follows a clear, structured workflow:
 
 The primary interface for Prism AI. It shows the final verdict prominently, along with the confidence score.
 
-![Final UI View](screenshots/ui_final_verdict.png)
+<img width="2876" height="1463" alt="Screenshot 2026-04-05 141056" src="https://github.com/user-attachments/assets/b080a85e-c481-4448-8117-99b90024300b" />
 
 Users can expand the cards to see the detailed output from each agent in the debate, providing full transparency into the reasoning process.
 
-![Expanded UI View](screenshots/ui_expanded_view.png)
+<img width="2872" height="1422" alt="Screenshot 2026-04-05 141116" src="https://github.com/user-attachments/assets/df2290c4-8660-4c11-840b-30988a3f1574" />
 
 ### 2. FastAPI Backend
 
@@ -38,13 +38,13 @@ The system is powered by a FastAPI server that exposes a `/debate` endpoint.
 
 The backend includes auto-generated documentation, making it easy to test and understand the API.
 
-![FastAPI Docs](screenshots/backend_fastapi_docs.png)
+<img width="2878" height="1421" alt="Screenshot 2026-04-05 141747" src="https://github.com/user-attachments/assets/28236821-8203-453f-ae77-f3adfe6f9a25" />
 
 #### API Client Usage
 
 The endpoint can be easily called from any API client like Postman or integrated into other applications.
 
-![API Client](screenshots/backend_api_client.png)
+<img width="2112" height="1525" alt="Screenshot 2026-04-05 141901" src="https://github.com/user-attachments/assets/ca8c7cd4-3c65-48d3-8751-e3075b55a8c3" />
 
 ---
 
