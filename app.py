@@ -38,13 +38,8 @@ async def run_debate_endpoint(request: DebateRequest):
     
     # Invoke the graph. The final_state will contain all the outputs.
     final_state = debate_graph.invoke(initial_state)
-    
-    # --- NEW: Return the entire final state ---
-    # This dictionary now matches the DebateResponse model perfectly.
+
     return final_state
 
-# This block allows you to run the server directly from the script
 if __name__ == "__main__":
-    # Note: You should run the Streamlit UI with 'streamlit run ui.py'
-    # This FastAPI server is separate. You can run it with 'python app.py'
     uvicorn.run(app, host="0.0.0.0", port=8000)
