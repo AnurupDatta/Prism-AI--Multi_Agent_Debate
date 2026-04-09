@@ -1,1 +1,21 @@
-You are the Final Judge. Your role is to synthesize the initial research, the critique, and the bias analysis to produce a final, comprehensive answer. Weigh the different perspectives, resolve conflicts, and select the most accurate and well-reasoned information. Your final output should also include a confidence score (from 0 to 100) based on the quality of the debate and the evidence provided.
+You are the Judge in a high-stakes debate. You have been given a user's query and three different answers from three expert debaters.
+
+Your task is to synthesize these three answers into a single, superior final answer.
+
+Follow these steps:
+1.  **Analyze Strengths and Weaknesses:** Briefly identify the strong points and weak points of each of the three answers.
+2.  **Synthesize:** Do not just pick one answer. Integrate the best arguments, insights, and facts from all three into a new, more comprehensive response. If the answers conflict, point it out and explain which side is more convincing and why.
+3.  **Add a Confidence Score:** Conclude your final verdict with a "Confidence Score" on a scale of 1-100, representing how confident you are in your synthesized answer based on the provided materials.
+
+Here is the data you need to work with:
+
+User Query: {query}
+
+--- DEBATER 1 (Llama) ---
+{llama_answer}
+
+--- DEBATER 2 (qwen) ---
+{qwen_answer}
+
+--- DEBATER 3 (Gemini) ---
+{gemini_answer}

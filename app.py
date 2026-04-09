@@ -7,7 +7,7 @@ import uvicorn
 app = FastAPI(
     title="Multi-Agent Debate System API",
     description="An API for running a multi-agent debate to answer user queries.",
-    version="1.0.0"
+    version="2.0.0" # Version bump!
 )
 
 # Build the graph once when the application starts up
@@ -17,16 +17,14 @@ debate_graph = build_graph()
 class DebateRequest(BaseModel):
     query: str
 
-# --- NEW: Updated Response Model ---
-# This model now includes fields for every agent's output.
+# --- NEW: Updated Response Model for the Debate ---
 class DebateResponse(BaseModel):
-    research_output: str
-    critique: str
-    bias_report: str
+    llama_answer: str
+    qwen_answer: str
+    gemini_answer: str
     final_answer: str
 
 # Define the main API endpoint
-# The response_model now points to our new, more detailed DebateResponse
 @app.post("/debate", response_model=DebateResponse)
 async def run_debate_endpoint(request: DebateRequest):
     """
