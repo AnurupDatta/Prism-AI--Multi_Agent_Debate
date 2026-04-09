@@ -14,7 +14,7 @@ Prism AI is an advanced system that goes beyond traditional single-LLM responses
 
 The system follows a clear, structured workflow:
 
-`User Query` → `Research Agent` → (`Critic Agent` + `Bias Detector`) → `Final Judge` → `Final Answer + Confidence Score`
+`User Query` →  (`llama agent` + `qwen agent` + `gemini agent`  ) → `Final Judge` → `Final Answer + Confidence Score`
 
 ---
 
@@ -24,11 +24,14 @@ The system follows a clear, structured workflow:
 
 The primary interface for Prism AI. It shows the final verdict prominently, along with the confidence score.
 
-<img width="2876" height="1463" alt="Screenshot 2026-04-05 141056" src="https://github.com/user-attachments/assets/b080a85e-c481-4448-8117-99b90024300b" />
+<img width="2859" height="1359" alt="Screenshot 2026-04-09 155112" src="https://github.com/user-attachments/assets/74be86ae-0fa8-4a52-89dc-fe22f6ff79bb" />
+<img width="2795" height="1270" alt="Screenshot 2026-04-09 155143" src="https://github.com/user-attachments/assets/adba2da8-2322-4d5c-93ae-e5f8d4218f4c" />
+
 
 Users can expand the cards to see the detailed output from each agent in the debate, providing full transparency into the reasoning process.
 
-<img width="2872" height="1422" alt="Screenshot 2026-04-05 141116" src="https://github.com/user-attachments/assets/df2290c4-8660-4c11-840b-30988a3f1574" />
+<img width="2875" height="1481" alt="Screenshot 2026-04-09 155132" src="https://github.com/user-attachments/assets/19da354f-c617-441c-af1b-ce3b5aff2f13" />
+
 
 ### 2. FastAPI Backend
 
@@ -52,7 +55,7 @@ The endpoint can be easily called from any API client like Postman or integrated
 
 -   **Orchestration**: `LangGraph`
 -   **LLM Integration**: `LangChain`
--   **LLM Provider**: `Groq` (for high-speed inference)
+-   **LLM Provider**: `Groq` (for high-speed inference), `Google AI Studio`
 -   **Backend**: `FastAPI`
 -   **Frontend**: `Streamlit`
 
@@ -87,6 +90,7 @@ The endpoint can be easily called from any API client like Postman or integrated
     -   Add your Groq API key to the file:
         ```
         GROQ_API_KEY=your_groq_api_key
+        GOOGLE_API_KEY=your_google_api_key
         ```
 
 ---
