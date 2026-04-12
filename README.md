@@ -1,7 +1,7 @@
 # 🚀 Prism AI: A Multi-Agent Debate System
 
 Prism AI is an advanced system that goes beyond traditional single-LLM responses. It simulates a debate between multiple specialized AI agents to produce a final answer that is comprehensive, critically evaluated, and checked for bias.
-
+Live (Render):https://prism-ai-multi-agent-debate.onrender.com/docs
 ## ✨ Key Features
 
 -   **Multi-Agent Architecture**: Utilizes a team of AI agents (Researcher, Critic, Bias Detector, and Judge) to analyze a query from multiple perspectives.
